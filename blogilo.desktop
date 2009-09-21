@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Blogilo
-Exec=blogilo %i -caption "%c"
-Icon=blogilo
-Type=Application
-Categories=Qt;KDE;Network;Internet
-GenericName=A KDE Blogging Client
-Terminal=false
-
