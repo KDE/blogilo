@@ -26,7 +26,7 @@
 BlogiloComposerWebEngineWidget::BlogiloComposerWebEngineWidget(BlogiloComposerWebEngineView *view, QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(this);
     lay->setMargin(0);
     mEditor = new BlogiloComposerWebEngineEditor(view, this);
 
@@ -35,7 +35,6 @@ BlogiloComposerWebEngineWidget::BlogiloComposerWebEngineWidget(BlogiloComposerWe
     connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::insertText, this, &BlogiloComposerWebEngineWidget::slotInsertShortUrl);
     connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::toolActivated, this, &BlogiloComposerWebEngineWidget::slotInsertText);
     lay->addWidget(mCustomToolsWidget);
-    setLayout(lay);
     view->setCustomTools(mCustomToolsWidget);
 }
 
