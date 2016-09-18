@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Blogilo</name>
+  <name xml:lang="ar">بلوغيلو</name>
   <name xml:lang="ast">Blogilo</name>
   <name xml:lang="bs">Blogilo</name>
   <name xml:lang="ca">Blogilo</name>
@@ -79,6 +80,7 @@
   <summary xml:lang="zh-TW">KDE 部落格客戶端程式</summary>
   <description>
     <p>Blogilo is a blogging client for KDE, which supports various blogging APIs.</p>
+    <p xml:lang="ar">«بلوغيلو» هو عميل تدوين لكدي، يدعم عددًا من واجهات برمجة التّطبيقات للتّدوين.</p>
     <p xml:lang="ca">El Blogilo és un client de blogs pel KDE, el qual és compatible amb diverses API de blogs.</p>
     <p xml:lang="ca-valencia">El Blogilo és un client de blogs pel KDE, el qual és compatible amb diverses API de blogs.</p>
     <p xml:lang="de">Blogilo ist ein Blogging-Programm für KDE, das verschiedene Programmier-Schnittstellen (APIs) für Blog-Systeme unterstützt.</p>
@@ -213,6 +215,7 @@
       <li xml:lang="x-test">xxPreviewing your post with your blog stylexx</li>
       <li xml:lang="zh-TW">以您的部落格的樣式來預覽您的文章</li>
       <li>Support for Blogger1.0, MetaWeblog, MovableType (Wordpress supports All of these!) and Google GData (used on Blogspot.com blogs) APIs</li>
+      <li xml:lang="ar">دعم واجهات برمجة التّطبيقات الآتية: Blogger1.0، وMetaWeblog، وMovableType (تدعمها ووردبرِس كلّها!) وGData لغوغل (مُستخدمة في مدوّنات Blogspot.com)</li>
       <li xml:lang="ca">Permet les API Blogger1.0, MetaWeblog, MovableType (el Wordpress admet tots aquests!) i Google GData (usada al blog Blogspot.com)</li>
       <li xml:lang="ca-valencia">Permet les API Blogger1.0, MetaWeblog, MovableType (el Wordpress admet tots estos!) i Google GData (usada al blog Blogspot.com)</li>
       <li xml:lang="de">Unterstützung für die Programmier-Schnittstellen (APIs) von Blogger1.0, MetaWeblog, MovableType (alle von Wordpress verwendet) und Google GData (verwendet auf Blogspot.com blogs)</li>
@@ -308,6 +311,7 @@
       <li xml:lang="x-test">xxSupport for creating drafts and scheduled postsxx</li>
       <li xml:lang="zh-TW">支援建立草稿與排程發布。</li>
       <li>Support for uploading media files to your blog (Just on supported APIs e.g. MetaWeblog and MovableType)</li>
+      <li xml:lang="ar">دعم رفع ملفّات الوسائط إلى مدوّنتك (فقط في واجهات برمجة التّطبيقات المدعومة مثل MetaWeblog وMovableType)</li>
       <li xml:lang="ca">Permet la pujada de fitxers de suports al vostre blog (només a les API que ho accepten, p. ex., MetaWeblog i MovableType)</li>
       <li xml:lang="ca-valencia">Permet la pujada de fitxers de suports al vostre blog (només a les API que ho accepten, p. ex., MetaWeblog i MovableType)</li>
       <li xml:lang="de">Unterstützung für das Hochladen von Medien zu Ihrem Blog, nur z. B. für MetaWeblog und MovableType</li>
@@ -371,6 +375,7 @@
       <li xml:lang="x-test">xxSupport for Fetching your recent blog entries.xx</li>
       <li xml:lang="zh-TW">支援抓取您最近的部落格文章。</li>
       <li>Support for adding Images to post from your system. It will upload them on Submitting post to blog (Just on supported APIs e.g. MetaWeblog and MovableType)</li>
+      <li xml:lang="ar">دعم إضافة الصّور إلى التّدوينة من نظامك. ستُرفع عند نشر التّدوينة (فقط في واجهات برمجة التّطبيقات المدعومة مثل MetaWeblog وMovableType)</li>
       <li xml:lang="ca">Permet afegir imatges als articles des del vostre sistema. Les pujarà en entregar l'article al blog (només a les API que ho accepten, p. ex., MetaWeblog i MovableType)</li>
       <li xml:lang="ca-valencia">Permet afegir imatges als articles des del vostre sistema. Les pujarà en entregar l'article al blog (només a les API que ho accepten, p. ex., MetaWeblog i MovableType)</li>
       <li xml:lang="de">Unterstützung für das Hinzufügen von Bildern von Ihrem System zu Ihren Posts. Die Bilder werden beim Hochladen zusammen mit Ihrem Text zum Blog hochgeladen, das funktioniert nur bei unterstützten Programmier-Schnittstellen (APIs) wie MetaWeblog und MovableType</li>
@@ -466,7 +471,7 @@
       <li xml:lang="x-test">xxSaving your writing copy to prevent data loss, at configurable intervals.xx</li>
       <li xml:lang="zh-TW">依設定間隔儲存您的文章複本以免資料遺失。</li>
       <li>Internal auto spell checker. (KDE spell checker used so most of languages are supported)</li>
-      <li xml:lang="ar">مدقّق إملاء آليّ داخليّ. (مدقّق كدي الإملائيّ مستخدم لذا أغلب اللغات مدعومة)</li>
+      <li xml:lang="ar">مدقّق إملاء آليّ داخليّ. (مدقّق كدي الإملائيّ يُستخدم، لذا أغلب اللغات مدعومة)</li>
       <li xml:lang="ca">Un corrector ortogràfic automàtic intern. (El corrector ortogràfic del KDE, usant així la majoria dels idiomes acceptats)</li>
       <li xml:lang="ca-valencia">Un corrector ortogràfic automàtic intern. (El corrector ortogràfic del KDE, usant així la majoria dels idiomes acceptats)</li>
       <li xml:lang="de">Interne automatische Rechtschreibprüfung. Dabei wird die KDE-Rechtschreibprüfung verwendet und damit viele Sprachen unterstützt</li>
