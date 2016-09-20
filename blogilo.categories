@@ -1,2 +1,2 @@
-log_blogilo blogilo (blogilo)
-log_composereditorwebengine blogilo (composereditorwebengine)
+org.kde.pim.blogilo blogilo (blogilo)
+org.kde.pim.composereditorwebengine blogilo (composereditorwebengine)

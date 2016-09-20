@@ -81,7 +81,7 @@ add_subdirectory( src )
 add_subdirectory( icons )
 add_subdirectory(kconf_update)
 
-install( FILES blogilo.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES blogilo.renamecategories blogilo.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(doc)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

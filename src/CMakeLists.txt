@@ -60,7 +60,7 @@ ki18n_wrap_ui(
     ui/blogsettingsbase.ui
     ui/uploadmediabase.ui
     )
-ecm_qt_declare_logging_category(blogilo_SRCS HEADER blogilo_debug.h IDENTIFIER BLOGILO_LOG CATEGORY_NAME log_blogilo)
+ecm_qt_declare_logging_category(blogilo_SRCS HEADER blogilo_debug.h IDENTIFIER BLOGILO_LOG CATEGORY_NAME org.kde.pim.blogilo)
 qt5_add_resources(blogilo_SRCS blogilo.qrc)
 
 kconfig_add_kcfg_files( blogilo_SRCS settings.kcfgc)
