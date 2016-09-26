@@ -63,7 +63,6 @@ find_package(KF5Blog ${KBLOG_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED)
 find_package(KF5WebEngineViewer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
-set(WEBENGINE_TYPE "QtWebEngine")
 
 # Extra package
 find_package(KF5GAPI "5.3.40" CONFIG)
