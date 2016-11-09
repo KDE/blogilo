@@ -84,6 +84,7 @@ target_link_libraries(blogilo
     composereditorwebengineprivate
     KF5::WebEngineViewer
     KF5::Crash
+    KF5::SyntaxHighlighting
     )
 
 if (KF5GAPI_FOUND)
