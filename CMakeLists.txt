@@ -65,7 +65,7 @@ find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5WebEngineViewer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
 
 # Extra package
-find_package(KF5GAPI "5.3.80" CONFIG)
+find_package(KF5GAPI "5.3.1" CONFIG)
 
 include_directories(${blogilo_SOURCE_DIR} ${blogilo_BINARY_DIR})
 add_definitions(-DQT_USE_QSTRINGBUILDER)
