@@ -188,7 +188,7 @@
       <li xml:lang="ca-valencia">Vista prèvia del vostre article amb l'estil del vostre blog</li>
       <li xml:lang="de">Vorschau Ihrer Posts im Stil Ihres Blogs</li>
       <li xml:lang="en-GB">Previewing your post with your blog style</li>
-      <li xml:lang="es">Previsualiza su envío con su estilo de blog</li>
+      <li xml:lang="es">Previsualiza su artículo con su estilo de blog</li>
       <li xml:lang="et">Postituse eelvaatlus ajaveebile omases stiilis</li>
       <li xml:lang="fi">Viestiesi esikatselu blogityylilläsi</li>
       <li xml:lang="fr">Afficher un aperçu de votre article avec votre style du blog</li>
@@ -252,7 +252,7 @@
       <li xml:lang="ca-valencia">Permet la creació/modificació/eliminació dels articles.</li>
       <li xml:lang="de">Unterstützung für das Erstellen/Verändern/Löschen von Posts.</li>
       <li xml:lang="en-GB">Support for Creating/Modifying/Deleting posts.</li>
-      <li xml:lang="es">Implementa creación/modificación/borrado de envíos.</li>
+      <li xml:lang="es">Implementa creación/modificación/borrado de artículos.</li>
       <li xml:lang="et">Postituste loomise/muutmise/kustutamise toetus</li>
       <li xml:lang="fi">Tuki viestien luomiseen, muuttamiseen ja poistamiseen.</li>
       <li xml:lang="fr">Prise en charge de la création, modification et suppression d'articles.</li>
@@ -284,7 +284,7 @@
       <li xml:lang="ca-valencia">Permet la creació d'esborranys i articles programats</li>
       <li xml:lang="de">Unterstützung für das Erstellen von Entwürfen und geplanten Posts</li>
       <li xml:lang="en-GB">Support for creating drafts and scheduled posts</li>
-      <li xml:lang="es">Implementa la creación de borradores y envíos planificados</li>
+      <li xml:lang="es">Implementa la creación de borradores y artículos planificados</li>
       <li xml:lang="et">Mustandite ja ajastatud postituste loomise toetus</li>
       <li xml:lang="fi">Tuki luonnosten ja ajastettujen viestien luomiseksi</li>
       <li xml:lang="fr">Prise en charge de la création de d'articles brouillons et planifiés.</li>
@@ -380,7 +380,7 @@
       <li xml:lang="ca-valencia">Permet afegir imatges als articles des del vostre sistema. Les pujarà en entregar l'article al blog (només a les API que ho accepten, p. ex., MetaWeblog i MovableType)</li>
       <li xml:lang="de">Unterstützung für das Hinzufügen von Bildern von Ihrem System zu Ihren Posts. Die Bilder werden beim Hochladen zusammen mit Ihrem Text zum Blog hochgeladen, das funktioniert nur bei unterstützten Programmier-Schnittstellen (APIs) wie MetaWeblog und MovableType</li>
       <li xml:lang="en-GB">Support for adding Images to post from your system. It will upload them on Submitting post to blog (Just on supported APIs e.g. MetaWeblog and MovableType)</li>
-      <li xml:lang="es">Implementa el añadido de imágenes al envió desde su sistema. Las cargará al aplicar los envíos a su blog (solo en las API reconocidas, p. ej., MetaWeblog y MovableType)</li>
+      <li xml:lang="es">Implementa el añadido de imágenes al envió desde su sistema. Las cargará al enviar los artículos a su blog (solo en las API reconocidas, p. ej., MetaWeblog y MovableType)</li>
       <li xml:lang="et">Süsteemist postitusele piltide lisamise toetus. Need laaditakse üles koos postitusega (ainult seda toetava API (nt. MetaWeblog ja MovableType) korral)</li>
       <li xml:lang="fi">Tuki kuvien lisäämiseksi viesteihisi. Kuvat lähetetään blogiin yhdessä viestin kanssa (vain tuetut APIt kuten MetaWeblog ja MovableType)</li>
       <li xml:lang="fr">Prise en charge de l'ajout d'images de votre système vers l'article. Le fichier sera envoyé lors de la soumission de l'article sur le blog (uniquement avec les interfaces prises en charge comme MetaWeblog et MovableType)</li>
@@ -476,7 +476,7 @@
       <li xml:lang="ca-valencia">Un corrector ortogràfic automàtic intern. (El corrector ortogràfic del KDE, usant així la majoria dels idiomes acceptats)</li>
       <li xml:lang="de">Interne automatische Rechtschreibprüfung. Dabei wird die KDE-Rechtschreibprüfung verwendet und damit viele Sprachen unterstützt</li>
       <li xml:lang="en-GB">Internal auto spell checker. (KDE spell checker used so most of languages are supported)</li>
-      <li xml:lang="es">Auto corrector ortográfico interno. (El corrector ortográfico de KDE usado para la mayoría de idiomas está reconocido)</li>
+      <li xml:lang="es">Autocorrector ortográfico interno. (El corrector ortográfico de KDE usado para la mayoría de idiomas está reconocido)</li>
       <li xml:lang="et">Sisemine automaatne õigekirja kontroll (kasutatakse KDE õigekirja kontrolli, niisiis on toetatud enamik keeli)</li>
       <li xml:lang="fi">Sisäinen automaattinen oikoluku. (Käyttää KDE:n oikolukua, joka tukee useimpia kieliä)</li>
       <li xml:lang="fr">Vérificateur orthographique automatique intégré (utilisant le vérificateur de KDE, donc la plupart des langues sont prises en charge)</li>
