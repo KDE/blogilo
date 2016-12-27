@@ -168,7 +168,7 @@ void StyleGetter::slotHtmlCopied(KJob *job)
     QByteArray httpData(qobject_cast<KIO::StoredTransferJob *>(job)->data());
 
     QString href(mTempPost->permaLink().url());
-    int filenameOffset = href.lastIndexOf(QLatin1String("/"));
+    int filenameOffset = href.lastIndexOf(QLatin1Char('/'));
     href = href.remove(filenameOffset + 1, 255);
     QString base(QLatin1String("<base href=\"") + href + QLatin1String("\"/>"));
 
