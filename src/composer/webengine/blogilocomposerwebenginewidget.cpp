@@ -31,7 +31,7 @@ BlogiloComposerWebEngineWidget::BlogiloComposerWebEngineWidget(BlogiloComposerWe
     mEditor = new BlogiloComposerWebEngineEditor(view, this);
 
     lay->addWidget(mEditor);
-    mCustomToolsWidget = new PimCommon::CustomToolsWidgetNg(Q_NULLPTR);
+    mCustomToolsWidget = new PimCommon::CustomToolsWidgetNg(nullptr);
     connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::insertText, this, &BlogiloComposerWebEngineWidget::slotInsertShortUrl);
     connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::toolActivated, this, &BlogiloComposerWebEngineWidget::slotInsertText);
     lay->addWidget(mCustomToolsWidget);

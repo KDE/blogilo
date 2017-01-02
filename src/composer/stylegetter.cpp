@@ -50,9 +50,9 @@ static const char  POST_CONTENT[] = "Temporary-Post-Used-For-Style-Detection-Con
 
 StyleGetter::StyleGetter(const int blogid, QObject *parent)
     : QObject(parent),
-      mTempPost(Q_NULLPTR),
-      mParent(Q_NULLPTR),
-      b(Q_NULLPTR)
+      mTempPost(nullptr),
+      mParent(nullptr),
+      b(nullptr)
 {
     BilboBlog *tempBlog = DBMan::self()->blog(blogid);
     if (tempBlog->isError()) {
@@ -221,7 +221,7 @@ void StyleGetter::slotTempPostRemoved(int blog_id, const BilboPost &post)
 
 void StyleGetter::generateRandomPostStrings()
 {
-    srand(time(Q_NULLPTR));
+    srand(time(nullptr));
     int postRandomNumber = rand();
     mPostTitle = QStringLiteral("%1%2").arg(QLatin1String(POST_TITLE)).arg(postRandomNumber);
     mPostContent = QStringLiteral("%1%2").arg(QLatin1String(POST_CONTENT)).arg(postRandomNumber);

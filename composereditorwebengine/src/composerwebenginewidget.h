@@ -37,7 +37,7 @@ class COMPOSEREDITORWEBENGINE_EXPORT ComposerWebEngineWidget : public QWidget
     Q_OBJECT
     Q_PROPERTY(bool enableRichText READ enableRichText WRITE setEnableRichText)
 public:
-    explicit ComposerWebEngineWidget(QWidget *parent = Q_NULLPTR);
+    explicit ComposerWebEngineWidget(QWidget *parent = nullptr);
     explicit ComposerWebEngineWidget(ComposerWebEngine *view, QWidget *parent);
 
     ~ComposerWebEngineWidget();

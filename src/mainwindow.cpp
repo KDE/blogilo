@@ -71,11 +71,11 @@
 
 MainWindow::MainWindow()
     : KXmlGuiWindow(),
-      activePost(Q_NULLPTR),
-      systemTray(Q_NULLPTR),
+      activePost(nullptr),
+      systemTray(nullptr),
       previousActivePostIndex(-1),
       busyNumber(0),
-      progress(Q_NULLPTR),
+      progress(nullptr),
       mCurrentBlogId(__currentBlogId)
 {
     setWindowTitle(i18n("Blogilo"));
@@ -400,7 +400,7 @@ void MainWindow::setupSystemTray()
         }
     } else if (systemTray) {
         systemTray->deleteLater();
-        systemTray = Q_NULLPTR;
+        systemTray = nullptr;
     }
 }
 
@@ -428,7 +428,7 @@ void MainWindow::slotActivePostChanged(int index)
     int activePostBlogId = -1;
     int prevPostBlogId = -1;
 
-    if ((prevActivePost != Q_NULLPTR) && (index != previousActivePostIndex)) {
+    if ((prevActivePost != nullptr) && (index != previousActivePostIndex)) {
         prevPostBlogId = prevActivePost->currentPostBlogId();
         toolbox->getFieldsValue(prevActivePost->currentPost());
         prevActivePost->setCurrentPostBlogId(mCurrentBlogId);
@@ -479,7 +479,7 @@ void MainWindow::slotRemoveAllExclude(int pos)
         widget->close();
     }
     if (tabPosts->count() < 1) {
-        activePost = Q_NULLPTR;
+        activePost = nullptr;
         toolbox->resetFields();
 //         actionCollection()->action("publish_post")->setEnabled( false );
     }
@@ -502,7 +502,7 @@ void MainWindow::slotRemovePostEntry(int pos)
     widget->close();
 
     if (tabPosts->count() < 1) {
-        activePost = Q_NULLPTR;
+        activePost = nullptr;
         toolbox->resetFields();
 //         actionCollection()->action("publish_post")->setEnabled( false );
     }
@@ -615,7 +615,7 @@ void MainWindow::slotBusy(bool isBusy)
             if (progress) {
                 statusBar()->removeWidget(progress);
                 progress->deleteLater();
-                progress = Q_NULLPTR;
+                progress = nullptr;
             }
 //             busyNumber = 0;
         }
@@ -651,7 +651,7 @@ void MainWindow::uploadMediaObject()
     UploadMediaDialog *uploadDlg = new UploadMediaDialog(this);
     connect(uploadDlg, &UploadMediaDialog::sigBusy, this, &MainWindow::slotBusy);
     if (mCurrentBlogId == -1) {
-        uploadDlg->init(Q_NULLPTR);
+        uploadDlg->init(nullptr);
     } else {
         uploadDlg->init(DBMan::self()->blog(mCurrentBlogId));
     }

@@ -44,7 +44,7 @@ class Backend : public QObject
 {
     Q_OBJECT
 public:
-    explicit Backend(int blog_id, QObject *parent = Q_NULLPTR);
+    explicit Backend(int blog_id, QObject *parent = nullptr);
 
     ~Backend();
 

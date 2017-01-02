@@ -45,7 +45,7 @@ public:
      * @param currentPost input and output of this Function.
      */
     void getFieldsValue(BilboPost *currentPost);
-    void setFieldsValue(BilboPost *post = Q_NULLPTR);
+    void setFieldsValue(BilboPost *post = nullptr);
     void setCurrentBlogId(int blog_id);
     void setCurrentPage(int index);
     void clearFields();

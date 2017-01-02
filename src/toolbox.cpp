@@ -301,7 +301,7 @@ void Toolbox::getFieldsValue(BilboPost *currentPost)
 
 void Toolbox::setFieldsValue(BilboPost *post)
 {
-    if (post == Q_NULLPTR) {
+    if (post == nullptr) {
         resetFields();
         qCDebug(BLOGILO_LOG) << "post is NULL";
         return;
@@ -389,7 +389,7 @@ void Toolbox::setCurrentPage(int index)
 
 void Toolbox::slotEntriesCopyUrl()
 {
-    if (lstEntriesList->currentItem() == Q_NULLPTR) {
+    if (lstEntriesList->currentItem() == nullptr) {
         return;
     }
     BilboPost post = DBMan::self()->getPostInfo(lstEntriesList->currentItem()->data(BlogEntryID).toInt());

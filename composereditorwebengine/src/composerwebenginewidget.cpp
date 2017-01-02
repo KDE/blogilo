@@ -30,8 +30,8 @@ class ComposerEditorWebEngine::ComposerWebEngineWidgetPrivate
 {
 public:
     ComposerWebEngineWidgetPrivate(ComposerWebEngineWidget *qq)
-        : toolBarLayout(Q_NULLPTR),
-          webEngine(Q_NULLPTR),
+        : toolBarLayout(nullptr),
+          webEngine(nullptr),
           q(qq),
           richTextEnabled(true)
     {

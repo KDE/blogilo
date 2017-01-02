@@ -32,8 +32,8 @@ class SyncUploader::Private
 {
 public:
     Private()
-        : mCurrentMedia(Q_NULLPTR),
-          loop(Q_NULLPTR),
+        : mCurrentMedia(nullptr),
+          loop(nullptr),
           success(false)
     {}
     BilboMedia *mCurrentMedia;

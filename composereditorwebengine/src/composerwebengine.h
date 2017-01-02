@@ -37,7 +37,7 @@ class COMPOSEREDITORWEBENGINE_EXPORT ComposerWebEngine : public WebEngineViewer:
 {
     Q_OBJECT
 public:
-    explicit ComposerWebEngine(QWidget *parent = Q_NULLPTR);
+    explicit ComposerWebEngine(QWidget *parent = nullptr);
     ~ComposerWebEngine();
 
     /**

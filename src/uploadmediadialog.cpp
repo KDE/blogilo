@@ -44,7 +44,7 @@
 #include <QMimeDatabase>
 
 UploadMediaDialog::UploadMediaDialog(QWidget *parent)
-    : QDialog(parent), mCurrentBlog(Q_NULLPTR)
+    : QDialog(parent), mCurrentBlog(nullptr)
 {
     QWidget *widget = new QWidget;
     ui.setupUi(widget);

@@ -49,7 +49,7 @@ class Q_DECL_HIDDEN Backend::Private
 {
 public:
     Private()
-        : kBlog(Q_NULLPTR), bBlog(Q_NULLPTR), categoryListNotSet(false)
+        : kBlog(nullptr), bBlog(nullptr), categoryListNotSet(false)
     {}
     KBlog::Blog *kBlog;
     BilboBlog *bBlog;

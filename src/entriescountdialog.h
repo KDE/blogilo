@@ -37,7 +37,7 @@ class EntriesCountDialog: public QDialog
 {
     Q_OBJECT
 public:
-    explicit EntriesCountDialog(QWidget *parent = Q_NULLPTR);
+    explicit EntriesCountDialog(QWidget *parent = nullptr);
     ~EntriesCountDialog();
     int count() const;
 

@@ -48,15 +48,15 @@ class AddEditBlog::Private
 {
 public:
     Private()
-        : mainW(Q_NULLPTR),
+        : mainW(nullptr),
           isNewBlog(false),
-          bBlog(Q_NULLPTR),
-          mBlog(Q_NULLPTR),
-          mFetchProfileIdTimer(Q_NULLPTR),
-          mFetchBlogIdTimer(Q_NULLPTR),
-          mFetchAPITimer(Q_NULLPTR),
-          wait(Q_NULLPTR),
-          okButton(Q_NULLPTR)
+          bBlog(nullptr),
+          mBlog(nullptr),
+          mFetchProfileIdTimer(nullptr),
+          mFetchBlogIdTimer(nullptr),
+          mFetchAPITimer(nullptr),
+          wait(nullptr),
+          okButton(nullptr)
     {}
     Ui::AddEditBlogBase ui;
     QTabWidget *mainW;
@@ -89,7 +89,7 @@ AddEditBlog::AddEditBlog(int blog_id, QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AddEditBlog::reject);
 
     d->isNewBlog = true;
-    d->mFetchAPITimer = d->mFetchBlogIdTimer = d->mFetchProfileIdTimer = Q_NULLPTR;
+    d->mFetchAPITimer = d->mFetchBlogIdTimer = d->mFetchProfileIdTimer = nullptr;
 
     connect(d->ui.txtId, &QLineEdit::textChanged, this, &AddEditBlog::enableOkButton);
     connect(d->ui.txtUrl, &QLineEdit::textChanged, this, &AddEditBlog::enableAutoConfBtn);
@@ -342,7 +342,7 @@ void AddEditBlog::handleFetchIDTimeout()
 void AddEditBlog::handleFetchAPITimeout()
 {
     d->mFetchAPITimer->deleteLater();
-    d->mFetchAPITimer = Q_NULLPTR;
+    d->mFetchAPITimer = nullptr;
     hideWaitWidget();
     d->ui.txtId->setEnabled(true);
     d->ui.txtId->clear();
@@ -364,7 +364,7 @@ void AddEditBlog::fetchedBlogId(const QList< QMap < QString, QString > > &list)
 {
     if (d->mFetchBlogIdTimer) {
         d->mFetchBlogIdTimer->deleteLater();
-        d->mFetchBlogIdTimer = Q_NULLPTR;
+        d->mFetchBlogIdTimer = nullptr;
     }
     hideWaitWidget();
     QString blogId, blogName, blogUrl, apiUrl;
@@ -619,7 +619,7 @@ void AddEditBlog::hideWaitWidget()
     if (d->wait) {
         d->wait->deleteLater();
     }
-    d->wait = Q_NULLPTR;
+    d->wait = nullptr;
 }
 
 void AddEditBlog::bloggerAuthenticated(const QMap< QString, QString > &authData)

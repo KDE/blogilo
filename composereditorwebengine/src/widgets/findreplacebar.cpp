@@ -45,13 +45,13 @@ class FindReplaceBarPrivate
 public:
     FindReplaceBarPrivate(FindReplaceBar *qq, QWebEngineView *view)
         : q(qq),
-          search(Q_NULLPTR),
-          caseSensitiveAct(Q_NULLPTR),
-          highlightAll(Q_NULLPTR),
-          findInSelection(Q_NULLPTR),
-          findPreviousButton(Q_NULLPTR),
-          findNextButton(Q_NULLPTR),
-          optionsMenu(Q_NULLPTR),
+          search(nullptr),
+          caseSensitiveAct(nullptr),
+          highlightAll(nullptr),
+          findInSelection(nullptr),
+          findPreviousButton(nullptr),
+          findNextButton(nullptr),
+          optionsMenu(nullptr),
           webView(view)
     {
 

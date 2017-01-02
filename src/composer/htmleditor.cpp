@@ -98,7 +98,7 @@ QWidget *HtmlEditor::configPage(int number, QWidget *parent)
 {
     KTextEditor::ConfigPage *page = mEditor->configPage(number, parent);
     if (!page) {
-        return Q_NULLPTR;
+        return nullptr;
     } else {
         return page;
     }

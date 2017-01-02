@@ -30,7 +30,7 @@
 
 BlogiloComposerWebEngineView::BlogiloComposerWebEngineView(QWidget *parent)
     : ComposerEditorWebEngine::ComposerWebEngine(parent),
-      mCustomTools(Q_NULLPTR)
+      mCustomTools(nullptr)
 {
     settings()->setFontSize(QWebEngineSettings::DefaultFontSize, 14);
 }

@@ -37,7 +37,7 @@ class BilboMedia : public QObject
     Q_OBJECT
 public:
     ///BilboMedia constructor
-    explicit BilboMedia(QObject *parent = Q_NULLPTR);
+    explicit BilboMedia(QObject *parent = nullptr);
 
     ///BilboMedia destructor
     ~BilboMedia();

@@ -37,9 +37,9 @@ class CatCheckBox : public QCheckBox
 {
     Q_OBJECT
 public:
-    explicit CatCheckBox(QWidget *parent = Q_NULLPTR);
+    explicit CatCheckBox(QWidget *parent = nullptr);
 
-    explicit CatCheckBox(const QString &text, QWidget *parent = Q_NULLPTR);
+    explicit CatCheckBox(const QString &text, QWidget *parent = nullptr);
 
     ~CatCheckBox();
 

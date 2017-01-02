@@ -35,7 +35,7 @@ class Q_DECL_HIDDEN BilboBlog::Private
 {
 public:
     Private()
-        : kblog(Q_NULLPTR)
+        : kblog(nullptr)
     {}
     QUrl mUrl;
     QString mBlogUrl;
