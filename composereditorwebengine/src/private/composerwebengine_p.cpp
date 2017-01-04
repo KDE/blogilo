@@ -1057,7 +1057,7 @@ void ComposerEditorWebEnginePrivate::_k_slotPasteWithoutFormatting()
     if (q->hasFocus()) {
         QString s = QApplication::clipboard()->text();
         if (!s.isEmpty()) {
-            s.replace(QStringLiteral("\n"), QStringLiteral("<BR>"));
+            s.replace(QLatin1Char('\n'), QStringLiteral("<BR>"));
             execCommand(QStringLiteral("insertHTML"), s);
         }
     }
