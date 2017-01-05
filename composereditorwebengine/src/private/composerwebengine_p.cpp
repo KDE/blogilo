@@ -598,7 +598,7 @@ void ComposerEditorWebEnginePrivate::_k_slotInsertHtml()
 {
     QPointer<KPIMTextEdit::InsertHtmlDialog> dialog = new KPIMTextEdit::InsertHtmlDialog(q);
     if (dialog->exec()) {
-        const QString str = dialog->html().remove(QStringLiteral("\n"));
+        const QString str = dialog->html().remove(QLatin1Char('\n'));
         if (!str.isEmpty()) {
             execCommand(QStringLiteral("insertHTML"), str);
         }
