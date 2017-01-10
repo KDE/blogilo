@@ -26,7 +26,7 @@ class ComposerWebEngineWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ComposerWebEngineWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit ComposerWebEngineWidgetTest(QObject *parent = nullptr);
     ~ComposerWebEngineWidgetTest();
 };
 

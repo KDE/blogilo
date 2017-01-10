@@ -31,7 +31,7 @@ class ComposerLinkDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ComposerLinkDialog(const QString &selectedText, QWidget *parent = Q_NULLPTR);
+    explicit ComposerLinkDialog(const QString &selectedText, QWidget *parent = nullptr);
     ~ComposerLinkDialog();
 
     QString html() const;

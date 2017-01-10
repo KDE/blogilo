@@ -33,7 +33,7 @@ class BlogiloComposerWebEngineWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit BlogiloComposerWebEngineWidget(BlogiloComposerWebEngineView *view, QWidget *parent = Q_NULLPTR);
+    explicit BlogiloComposerWebEngineWidget(BlogiloComposerWebEngineView *view, QWidget *parent = nullptr);
     ~BlogiloComposerWebEngineWidget();
 
     BlogiloComposerWebEngineEditor *editor() const;

@@ -33,7 +33,7 @@ class ComposerImageResizeWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ComposerImageResizeWidget(const QWebElement &element, QWidget *parent = Q_NULLPTR);
+    explicit ComposerImageResizeWidget(const QWebElement &element, QWidget *parent = nullptr);
     ~ComposerImageResizeWidget();
 
 protected:

@@ -50,7 +50,7 @@ public:
      * tools, and a button for getting blog style.
      * @param parent is parent widget
      */
-    explicit BilboBrowser(QWidget *parent = Q_NULLPTR);
+    explicit BilboBrowser(QWidget *parent = nullptr);
 
     /**
      * @brief BilboBrowser destructor.

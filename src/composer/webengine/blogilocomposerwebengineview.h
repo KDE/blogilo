@@ -30,7 +30,7 @@ class BlogiloComposerWebEngineView : public ComposerEditorWebEngine::ComposerWeb
 {
     Q_OBJECT
 public:
-    explicit BlogiloComposerWebEngineView(QWidget *parent = Q_NULLPTR);
+    explicit BlogiloComposerWebEngineView(QWidget *parent = nullptr);
     ~BlogiloComposerWebEngineView();
 
     void startEditing();

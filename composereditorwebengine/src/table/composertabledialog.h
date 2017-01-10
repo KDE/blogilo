@@ -30,7 +30,7 @@ class ComposerTableDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ComposerTableDialog(QWidget *parent = Q_NULLPTR);
+    explicit ComposerTableDialog(QWidget *parent = nullptr);
     ~ComposerTableDialog();
 
     QString html() const;
