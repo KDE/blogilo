@@ -1,7 +1,7 @@
 
 configure_file(blogilo-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/blogilo-version.h @ONLY)
 
-if (KF5GAPI_FOUND)
+if (KPimGAPI_FOUND)
     add_definitions(-DHAVE_GAPIBLOGGER_SUPPORT)
 endif()
 
@@ -40,7 +40,7 @@ set(blogilo_web_editor
     composer/webengine/blogilocomposerwebenginewidget.cpp
     )
 
-if (KF5GAPI_FOUND)
+if (KPimGAPI_FOUND)
     # Blogger API implementation imported from KBlog due to circular deps between
     # kdepimlibs and libkgapi
     # TODO: Move back to KBlog in KF5
@@ -87,8 +87,8 @@ target_link_libraries(blogilo
     KF5::SyntaxHighlighting
     )
 
-if (KF5GAPI_FOUND)
-    target_link_libraries( blogilo KF5::GAPIBlogger KF5::GAPICore)
+if (KPimGAPI_FOUND)
+    target_link_libraries( blogilo KPim::GAPIBlogger KPim::GAPICore)
 endif()
 
 install( TARGETS blogilo ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
