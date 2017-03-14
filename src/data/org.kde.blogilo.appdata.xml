@@ -80,37 +80,6 @@
   <summary xml:lang="zh-TW">KDE 部落格客戶端程式</summary>
   <description>
     <p>Blogilo is a blogging client by KDE, which supports various blogging APIs.</p>
-    <p xml:lang="ar">«بلوغيلو» هو عميل تدوين لكدي، يدعم عددًا من واجهات برمجة التّطبيقات للتّدوين.</p>
-    <p xml:lang="ca">El Blogilo és un client de blogs pel KDE, el qual és compatible amb diverses API de blogs.</p>
-    <p xml:lang="ca-valencia">El Blogilo és un client de blogs pel KDE, el qual és compatible amb diverses API de blogs.</p>
-    <p xml:lang="de">Blogilo ist ein Blogging-Programm für KDE, das verschiedene Programmier-Schnittstellen (APIs) für Blog-Systeme unterstützt.</p>
-    <p xml:lang="en-GB">Blogilo is a blogging client for KDE, which supports various blogging APIs.</p>
-    <p xml:lang="es">Blogilo en un cliente de blogueo para KDE, que implementa varias API de blogueo.</p>
-    <p xml:lang="et">Blogilo on KDE ajaveebiklient, mis toetab mitmeid blogimise API-sid.</p>
-    <p xml:lang="fi">Blogilo on KDE:n blogausasiakas, joka tukee useampaa eri blogaus-APIa.</p>
-    <p xml:lang="fr">Blogilo est un client de blog pour KDE qui prend en charge diverses interfaces de programmation pour blogs.</p>
-    <p xml:lang="gl">Blogilo é un cliente de KDE para blogues compatíbel coas API de varios tipos de blogue.</p>
-    <p xml:lang="hu">A Blogilo egy blogkliens a KDE-hez, amely több különböző blog API-t támogat.</p>
-    <p xml:lang="it">Blogilo è un programma client per i blog per KDE e supporta varie API per blog.</p>
-    <p xml:lang="ko">Blogilo는 여러 블로그 API를 지원하는 KDE 블로그 클라이언트입니다.</p>
-    <p xml:lang="nb">Blogilo er en bloggeklient for KDE, den støtter forskjellige API-er for blogging.</p>
-    <p xml:lang="nds">Blogilo is en Nettdaagbook-Client för KDE, de en Reeg Nettdaagbook-APIs ünnerstütten deit.</p>
-    <p xml:lang="nl">Blogilo is een client voor blogging voor KDE, die verschillende blogging API's ondersteunt.</p>
-    <p xml:lang="pl">Blogilo jest klientem blogowania dla KDE, który obsługuje różne API blogowania.</p>
-    <p xml:lang="pt">O Blogilo é um cliente de 'blogs' para o KDE, o qual suporta várias API's de 'blogs'.</p>
-    <p xml:lang="pt-BR">Blogilo é um cliente de blogs para o KDE, que tem suporte as APIs de vários blogs.</p>
-    <p xml:lang="ru">Blogilo — программа от KDE для ведения блогов, которая поддерживает API множества интернет-площадок.</p>
-    <p xml:lang="sk">Blogilo je blogovací klient pre KDE, ktorý podporuje rôzne blogovanie API.</p>
-    <p xml:lang="sl">Blogilo je KDE-jev odjemalec za bloganje, ki podpira številne API-je za bloganje.</p>
-    <p xml:lang="sr">Блогило је клијент за блоговање за КДЕ, који подржава разноврсне АПИ‑је.</p>
-    <p xml:lang="sr-Latn">Blogilo je klijent za blogovanje za KDE, koji podržava raznovrsne API‑je.</p>
-    <p xml:lang="sr-ijekavian">Блогило је клијент за блоговање за КДЕ, који подржава разноврсне АПИ‑је.</p>
-    <p xml:lang="sr-ijekavianlatin">Blogilo je klijent za blogovanje za KDE, koji podržava raznovrsne API‑je.</p>
-    <p xml:lang="sv">Blogilo är en bloggklient för KDE, som stöder diverse programmeringsgränssnitt för bloggar.</p>
-    <p xml:lang="tr">Blogilo çeşitli günlük API'lerini destekleyen KDE için bir günlük istemcisidir.</p>
-    <p xml:lang="uk">Blogilo — клієнт для ведення блоків у KDE, у якому передбачено різноманітні програмні інтерфейси для ведення блогів.</p>
-    <p xml:lang="x-test">xxBlogilo is a blogging client for KDE, which supports various blogging APIs.xx</p>
-    <p xml:lang="zh-TW">Blogilo 是一個 KDE 上的部落格客戶端程式，支援不同的部落格 API。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
     <p xml:lang="bs">Svojstva:</p>
