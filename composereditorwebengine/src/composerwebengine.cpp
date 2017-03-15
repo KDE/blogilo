@@ -623,7 +623,7 @@ QAction *ComposerWebEngine::action(ComposerWebEngineAction actionType) const
     case LastType:
         break;
     }
-    return 0;
+    return nullptr;
 }
 
 QMap<QString, QString> ComposerWebEngine::localImages() const

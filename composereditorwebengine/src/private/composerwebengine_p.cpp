@@ -525,7 +525,7 @@ QAction *ComposerEditorWebEnginePrivate::getAction(QWebEnginePage::WebAction act
     if (action >= 0 && action <= 66) {
         return q->page()->action(static_cast<QWebEnginePage::WebAction>(action));
     } else {
-        return 0;
+        return nullptr;
     }
 }
 
