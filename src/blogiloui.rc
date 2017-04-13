@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="blogilo" version="12">
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="blogilo" version="12">
 <MenuBar>
   <Menu name="blog"><text>Blog</text>
     <Action name="add_blog" />
@@ -24,4 +24,4 @@
     <Action name="blogs_list" />
     <Action name="open_blog_in_browser" />
 </Toolbar>
-</kpartgui>
+</gui>
