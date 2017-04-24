@@ -107,8 +107,7 @@ QString BilboPost::toString() const
 {
     //  if(!title().isEmpty())
     //   qDebug("BilboPost::toString: title is %s", this->title());
-    QString ret;
-    ret = QStringLiteral("\n******* Post Info **********");
+    QString ret = QStringLiteral("\n******* Post Info **********");
     ret += QLatin1String("\nID: ") + postId();
     ret += QLatin1String("\nTitle: ") + title();
     ret += QLatin1String("\nContent: ") + content();
