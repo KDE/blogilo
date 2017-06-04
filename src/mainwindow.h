@@ -105,8 +105,8 @@ private Q_SLOTS:
     void slotActionFailed(const QString &serviceName, const QString &filename);
 
 protected:
-    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
-    void closeEvent(QCloseEvent *event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *event) override;
+    void closeEvent(QCloseEvent *event) override;
 
 private:
     void setCurrentBlog(int blog_id);

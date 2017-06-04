@@ -79,7 +79,7 @@ public:
     /**
       Returns name of the service.
     */
-    QString interfaceName() const Q_DECL_OVERRIDE;
+    QString interfaceName() const override;
 
     /**
       Authenticate this instance of Blogger against Google account.
@@ -124,7 +124,7 @@ public:
       @see     void fetchPost( KBlog::BlogPost* )
       @see     BlogPost::Status
     */
-    void listRecentPosts(int number) Q_DECL_OVERRIDE;
+    void listRecentPosts(int number) override;
 
     /**
       Fetch the Post with a specific id.
@@ -133,7 +133,7 @@ public:
       @see BlogPost::setPostId( const QString& )
       @see fetchedPost( KBlog::BlogPost *post )
     */
-    void fetchPost(KBlog::BlogPost *post) Q_DECL_OVERRIDE;
+    void fetchPost(KBlog::BlogPost *post) override;
 
     /**
       Remove a post from the server.
@@ -142,7 +142,7 @@ public:
       @see BlogPost::setPostId( const QString& )
       @see removedPost( KBlog::BlogPost* )
     */
-    void removePost(KBlog::BlogPost *post) Q_DECL_OVERRIDE;
+    void removePost(KBlog::BlogPost *post) override;
 
     /**
       Create a new post on server.
@@ -150,13 +150,13 @@ public:
 
       @see createdPost( KBlog::BlogPost *post )
     */
-    void createPost(KBlog::BlogPost *post) Q_DECL_OVERRIDE;
+    void createPost(KBlog::BlogPost *post) override;
 
     /**
       Modify a post on server.
       @param post This is used to send the modified post including the correct id.
     */
-    void modifyPost(KBlog::BlogPost *post) Q_DECL_OVERRIDE;
+    void modifyPost(KBlog::BlogPost *post) override;
 
     /**
       List the comments available for this post on the server.

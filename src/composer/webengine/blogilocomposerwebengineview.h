@@ -34,7 +34,7 @@ public:
     ~BlogiloComposerWebEngineView();
 
     void startEditing();
-    void addExtraAction(QMenu *menu) Q_DECL_OVERRIDE;
+    void addExtraAction(QMenu *menu) override;
 
     void setCustomTools(PimCommon::CustomToolsWidgetNg *customTool);
 

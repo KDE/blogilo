@@ -36,7 +36,7 @@ public:
     bool isPrivate() const;
     bool isNew() const;
 public Q_SLOTS:
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 private:
     class Private;
     Private *const d;
