@@ -494,7 +494,7 @@ void Toolbox::requestEntriesListContextMenu(const QPoint &pos)
         return;
     }
     Q_UNUSED(pos);
-    QMenu *entriesContextMenu = new QMenu;
+    QMenu *entriesContextMenu = new QMenu(this);
     QAction *actEntriesOpenInBrowser = new QAction(QIcon::fromTheme(QStringLiteral("applications-internet")),
             i18n("Open in browser"), entriesContextMenu);
     connect(actEntriesOpenInBrowser, &QAction::triggered, this, &Toolbox::openPostInBrowser);
