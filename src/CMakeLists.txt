@@ -85,6 +85,8 @@ target_link_libraries(blogilo
     KF5::WebEngineViewer
     KF5::Crash
     KF5::SyntaxHighlighting
+    KF5::KIOFileWidgets
+    KF5::Notifications
     )
 
 if (KPimGAPI_FOUND)

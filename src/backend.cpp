@@ -40,7 +40,6 @@
 #include "blogilo_debug.h"
 #include <KLocalizedString>
 
-#include <kio/netaccess.h>
 #include <kio/job.h>
 
 const QRegExp splitRX(QStringLiteral("((<hr/?>)?<!--split-->)"));

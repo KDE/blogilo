@@ -58,7 +58,8 @@ find_package(KF5SyntaxHighlighting ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5TextEditor ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5XmlGui ${KF5_VERSION} CONFIG REQUIRED)
-
+find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Notifications ${KF5_VERSION} CONFIG REQUIRED)
 
 # Find KdepimLibs Package
 find_package(KF5Blog ${KBLOG_LIB_VERSION} CONFIG REQUIRED)
