@@ -100,6 +100,7 @@
     <p xml:lang="tr">Blogilo, KDE için geliştirilmiş, çeşitli günlük API'lerini destekleyen bir günlük istemcisidir.</p>
     <p xml:lang="uk">Blogilo — клієнт для ведення блоків від KDE, у якому передбачено різноманітні програмні інтерфейси для ведення блогів.</p>
     <p xml:lang="x-test">xxBlogilo is a blogging client by KDE, which supports various blogging APIs.xx</p>
+    <p xml:lang="zh-CN">Blogilo 是 KDE 博客客户端，支持多种博客 API。</p>
     <p>Features:</p>
     <p xml:lang="ar">الميزات:</p>
     <p xml:lang="bs">Svojstva:</p>
@@ -170,6 +171,7 @@
       <li xml:lang="tr">Tam donanımlı bir WYSIWYG düzenleyici + HTML düzenleyici</li>
       <li xml:lang="uk">повноцінний візуальний редактор та редактор коду HTML;</li>
       <li xml:lang="x-test">xxA full featured WYSIWYG editor + An HTML editorxx</li>
+      <li xml:lang="zh-CN">全功能的所见即所得编辑器和 HTML 编辑器</li>
       <li xml:lang="zh-TW">完整的所見即所得的編輯器，加上一個 HTML 編輯器</li>
       <li>Previewing your post with your blog style</li>
       <li xml:lang="ar">عرض تدوينتك بنمط مدوّنتك</li>
@@ -202,6 +204,7 @@
       <li xml:lang="tr">Gönderinizi kendi blog biçeminizle ön izleme</li>
       <li xml:lang="uk">попередній перегляд допису у стилі вашого блогу;</li>
       <li xml:lang="x-test">xxPreviewing your post with your blog stylexx</li>
+      <li xml:lang="zh-CN">使用您的博客样式预览帖子</li>
       <li xml:lang="zh-TW">以您的部落格的樣式來預覽您的文章</li>
       <li>Support for Blogger1.0, MetaWeblog, MovableType (Wordpress supports All of these!) and Google GData (used on Blogspot.com blogs) APIs</li>
       <li xml:lang="ar">دعم واجهات برمجة التّطبيقات الآتية: Blogger1.0، وMetaWeblog، وMovableType (تدعمها ووردبرِس كلّها!) وGData لغوغل (مُستخدمة في مدوّنات Blogspot.com)</li>
@@ -234,6 +237,7 @@
       <li xml:lang="tr">Blogger1.0, MetaWeblog, MovableType (Wordpress bunların Hepsini destekler!) ve Google GData (Blogspot.com bloglarında kullanılan) API'leri için destek</li>
       <li xml:lang="uk">підтримка програмних інтерфейсів Blogger1.0, MetaWeblog, MovableType (у Wordpress передбачено усі ці програмні інтерфейси!) та Google GData (використовується у блогах Blogspot.com);</li>
       <li xml:lang="x-test">xxSupport for Blogger1.0, MetaWeblog, MovableType (Wordpress supports All of these!) and Google GData (used on Blogspot.com blogs) APIsxx</li>
+      <li xml:lang="zh-CN">支持 Blogger 1.0，MetaWeblog，MovableType (WordPress 支持所有这些！) 和 Google GData (用于 Blogspot.com 博客) API</li>
       <li xml:lang="zh-TW">支援 Blogger1.0, MetaWeblog, MovableType (Wordpress 全部都支援！) 以及 Google GData (用於 Blogspot.com) APIs</li>
       <li>Support for Creating/Modifying/Deleting posts.</li>
       <li xml:lang="ar">دعم إنشاء التّدوينات وتعديلها وحذفها.</li>
@@ -266,6 +270,7 @@
       <li xml:lang="tr">Gönderi Oluşturma/Değiştirme/Silme desteği.</li>
       <li xml:lang="uk">підтримка створення дописів, внесення до них змін та вилучення дописів;</li>
       <li xml:lang="x-test">xxSupport for Creating/Modifying/Deleting posts.xx</li>
+      <li xml:lang="zh-CN">支持创建/修改/删除文章。</li>
       <li xml:lang="zh-TW">支援建立、變更與刪除文章。</li>
       <li>Support for creating drafts and scheduled posts</li>
       <li xml:lang="ar">دعم إنشاء المسودّات والتّدوينات المجدولة</li>
@@ -298,6 +303,7 @@
       <li xml:lang="tr">Taslak oluşturme ve programlı gönderi desteği</li>
       <li xml:lang="uk">підтримка створення чернеток та планування дописів;</li>
       <li xml:lang="x-test">xxSupport for creating drafts and scheduled postsxx</li>
+      <li xml:lang="zh-CN">支持创建草稿和定时发布文章</li>
       <li xml:lang="zh-TW">支援建立草稿與排程發布。</li>
       <li>Support for uploading media files to your blog (Just on supported APIs e.g. MetaWeblog and MovableType)</li>
       <li xml:lang="ar">دعم رفع ملفّات الوسائط إلى مدوّنتك (فقط في واجهات برمجة التّطبيقات المدعومة مثل MetaWeblog وMovableType)</li>
@@ -330,6 +336,7 @@
       <li xml:lang="tr">Medya dosyalarını blogunuza yükleme desteği (Yalnızca desteklenen API'lerde örn. MetaWeblog ve MovableType)</li>
       <li xml:lang="uk">підтримка вивантаження мультимедійних файлів до блогу (лише для відповідних програмних інтерфейсів, зокрема MetaWeblog та MovableType);</li>
       <li xml:lang="x-test">xxSupport for uploading media files to your blog (Just on supported APIs e.g. MetaWeblog and MovableType)xx</li>
+      <li xml:lang="zh-CN">支持上传媒体文件到博客 (只对支持的 API，例如 MetaWeblog 和 MovableType)</li>
       <li xml:lang="zh-TW">支援上傳媒體檔到您的部落格中（但 API 必須有支援，如 MetaWeblog 與 MovableType）</li>
       <li>Support for Fetching your recent blog entries.</li>
       <li xml:lang="ar">دعم جلب أحدث مدخلات المدوّنة.</li>
@@ -362,6 +369,7 @@
       <li xml:lang="tr">Son zamanlardaki blog girdilerinizi Getirme desteği.</li>
       <li xml:lang="uk">підтримка отримання нещодавніх записів з вашого блогу;</li>
       <li xml:lang="x-test">xxSupport for Fetching your recent blog entries.xx</li>
+      <li xml:lang="zh-CN">支持获取您最近的博客文章。</li>
       <li xml:lang="zh-TW">支援抓取您最近的部落格文章。</li>
       <li>Support for adding Images to post from your system. It will upload them on Submitting post to blog (Just on supported APIs e.g. MetaWeblog and MovableType)</li>
       <li xml:lang="ar">دعم إضافة الصّور إلى التّدوينة من نظامك. ستُرفع عند نشر التّدوينة (فقط في واجهات برمجة التّطبيقات المدعومة مثل MetaWeblog وMovableType)</li>
@@ -394,6 +402,7 @@
       <li xml:lang="tr">Sisteminizden gönderilmek üzere Resim ekleme desteği. Gönderi bloga gönderildiğinde yükleyecektir (Yalnızca desteklenen API'lerde örn. MetaWeblog ve MovableType)</li>
       <li xml:lang="uk">підтримка додавання до дописів зображень з вивантаженням допису на блог (лише для відповідних програмних інтерфейсів, зокрема MetaWeblog та MovableType);</li>
       <li xml:lang="x-test">xxSupport for adding Images to post from your system. It will upload them on Submitting post to blog (Just on supported APIs e.g. MetaWeblog and MovableType)xx</li>
+      <li xml:lang="zh-CN">支持从系统添加图片到文章。在您提交文章到博客时，它们将被上传 (只对支持的 API，例如 MetaWeblog 和 MovableType)</li>
       <li xml:lang="zh-TW">支援從您的系統新增媒體檔到您的部落格文章中。它會在提交文章時順便上傳到部落格中（但 API 必須有支援，如 MetaWeblog 與 MovableType）</li>
       <li>Support for saving local entries before publishing.</li>
       <li xml:lang="ar">دعم حفظ مدخلات محليّة قبل النّشر.</li>
@@ -426,6 +435,7 @@
       <li xml:lang="tr">Yayımlamadan önce yerel girdilerin kaydedilmesi desteği.</li>
       <li xml:lang="uk">підтримка збереження локальних записів до оприлюднення;</li>
       <li xml:lang="x-test">xxSupport for saving local entries before publishing.xx</li>
+      <li xml:lang="zh-CN">支持在发布前保存本地文章。</li>
       <li xml:lang="zh-TW">支援在發布前先在本地端儲存</li>
       <li>Saving your writing copy to prevent data loss, at configurable intervals.</li>
       <li xml:lang="ar">حفظ نسخة عمل لتجنّب فقدان البيانات، عند فترات يمكن ضبطها.</li>
@@ -458,6 +468,7 @@
       <li xml:lang="tr">Yazma kopyanızı veri kaybına karşı ayarlanabilir aralıklarla kaydetme.</li>
       <li xml:lang="uk">збереження з визначеним інтервалом часу тимчасової копії для запобігання втраті даних;</li>
       <li xml:lang="x-test">xxSaving your writing copy to prevent data loss, at configurable intervals.xx</li>
+      <li xml:lang="zh-CN">保存您的写作副本以防止数据丢失，时间间隔可配置。</li>
       <li xml:lang="zh-TW">依設定間隔儲存您的文章複本以免資料遺失。</li>
       <li>Internal auto spell checker. (KDE spell checker used so most of languages are supported)</li>
       <li xml:lang="ar">مدقّق إملاء آليّ داخليّ. (مدقّق كدي الإملائيّ يُستخدم، لذا أغلب اللغات مدعومة)</li>
@@ -490,6 +501,7 @@
       <li xml:lang="tr">Dahili otomatik yazım denetimi. (KDE yazım denetimi kullanılır yani çoğu dil desteklenir)</li>
       <li xml:lang="uk">вбудована система перевірки правопису (засіб перевірки правопису KDE, у якому передбачено підтримку багатьох поширених мов).</li>
       <li xml:lang="x-test">xxInternal auto spell checker. (KDE spell checker used so most of languages are supported)xx</li>
+      <li xml:lang="zh-CN">内部拼写检查器。(使用 KDE 拼写检查器，所以大多数语言都能被支持)</li>
       <li xml:lang="zh-TW">內部自動拼字檢查。（用 KDE 裡的拼字檢查功能，所以大部份語言都支援）</li>
     </ul>
   </description>
