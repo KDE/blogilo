@@ -18,24 +18,20 @@
 
 */
 
+#ifndef COMPOSERWEBENGINE_P_H
+#define COMPOSERWEBENGINE_P_H
+
 #include "composerwebengine.h"
 
-#include <kpimtextedit/emoticontexteditaction.h>
+#include <KPIMTextEdit/EmoticonTextEditAction>
 
-class KToggleAction;
-class QAction;
-class KSelectAction;
+namespace WebEngineViewer {
+  class WebEnginePage;
+}
+
 class KFontAction;
-class ComposerImageResizeWidget;
-
-namespace KPIMTextEdit
-{
-class EmoticonTextEditAction;
-}
-namespace WebEngineViewer
-{
-class WebEnginePage;
-}
+class KSelectAction;
+class KToggleAction;
 
 namespace ComposerEditorWebEngine
 {
@@ -176,3 +172,5 @@ public:
 }
 
 Q_DECLARE_METATYPE(ComposerEditorWebEngine::ComposerEditorWebEnginePrivate::FormatType)
+
+#endif

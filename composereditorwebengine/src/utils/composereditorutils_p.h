@@ -18,11 +18,10 @@
 
 */
 
-#ifndef COMPOSEREDITORUTIL_P_H
-#define COMPOSEREDITORUTIL_P_H
+#ifndef COMPOSEREDITORUTILS_P_H
+#define COMPOSEREDITORUTILS_P_H
 
 #include <QColor>
-#include <QString>
 #include <QUrl>
 
 namespace ComposerEditorWebEngine
@@ -30,10 +29,10 @@ namespace ComposerEditorWebEngine
 
 namespace Utils
 {
-QColor convertRgbToQColor(QString rgb);
-QUrl guessUrlFromString(const QString &string);
+    QColor convertRgbToQColor(QString rgb);
+    QUrl guessUrlFromString(const QString &string);
 }
 
 }
 
-#endif // COMPOSEREDITORUTIL_P_H
+#endif // COMPOSEREDITORUTILS_P_H
