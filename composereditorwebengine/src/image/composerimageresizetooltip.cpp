@@ -49,7 +49,7 @@ public:
 
 void ComposerImageResizeToolTipPrivate::displaySize(const QSize &s)
 {
-    lab->setText(i18n("%1x%2").arg(s.width()).arg(s.height()));
+    lab->setText(i18nc("image size(width x height)", "%1x%2", s.width(), s.height()));
 }
 
 ComposerImageResizeToolTip::ComposerImageResizeToolTip(QWidget *parent)
@@ -69,4 +69,3 @@ void ComposerImageResizeToolTip::displaySize(const QSize &s)
 }
 
 }
-
