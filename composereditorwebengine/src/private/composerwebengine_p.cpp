@@ -47,6 +47,7 @@
 #include "composereditorwebengine_debug.h"
 #include <KFontAction>
 #include <KRun>
+
 #include <QUrl>
 #include <QIcon>
 #include <KStandardShortcut>
@@ -1037,6 +1038,7 @@ bool ComposerEditorWebEnginePrivate::queryCommandState(const QString &cmd)
     const QVariant result = frame->evaluateJavaScript(js);
     return result.toString().simplified().toLower() == QStringLiteral("true");
 #else
+    Q_UNUSED(cmd);
     return false;
 #endif
 }
@@ -1066,12 +1068,13 @@ void ComposerEditorWebEnginePrivate::_k_slotPasteWithoutFormatting()
 
 void ComposerEditorWebEnginePrivate::_k_slotInsertSpecialChar()
 {
-    KPIMTextEdit::SelectSpecialCharDialog dlg(q);
-    dlg.showSelectButton(false);
-    dlg.autoInsertChar();
-    if (dlg.exec()) {
-        execCommand(QStringLiteral("insertHTML"), dlg.currentChar());
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(q);
+    dlg->showSelectButton(false);
+    dlg->autoInsertChar();
+    if (dlg->exec()) {
+        execCommand(QStringLiteral("insertHTML"), dlg->currentChar());
     }
+    delete dlg;
 }
 
 void ComposerEditorWebEnginePrivate::_k_slotInsertAnchor()
@@ -1099,4 +1102,3 @@ QMap<QString, QString> ComposerEditorWebEnginePrivate::localImages() const
 }
 
 }
-
