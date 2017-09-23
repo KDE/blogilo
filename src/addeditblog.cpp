@@ -22,26 +22,20 @@
 */
 
 #include "addeditblog.h"
-#include "waitwidget.h"
-#include "bilboblog.h"
-#include "dbman.h"
-
-#include <kblog/blogger1.h>
-#include <kblog/metaweblog.h>
-#include <kblog/movabletype.h>
-#include <kblog/wordpressbuggy.h>
-#ifdef HAVE_GAPIBLOGGER_SUPPORT
 #include "blogger.h"
-#endif
-#include <kmessagebox.h>
+#include "dbman.h"
+#include "waitwidget.h"
 #include "blogilo_debug.h"
-#include <kio/jobclasses.h>
-#include <kio/job.h>
-#include <KLocalizedString>
 
+#include <KBlog/Blogger1>
+
+#include <KMessageBox>
+#include <KIO/Job>
+
+#include <QPointer>
 #include <QTableWidget>
 #include <QTimer>
-#include <KConfigGroup>
+
 static const int TIMEOUT = 45000;
 
 class AddEditBlog::Private
@@ -97,7 +91,8 @@ AddEditBlog::AddEditBlog(int blog_id, QWidget *parent)
     connect(d->ui.txtPass, &QLineEdit::textChanged, this, &AddEditBlog::enableAutoConfBtn);
     connect(d->ui.btnAutoConf, &QPushButton::clicked, this, &AddEditBlog::autoConfigure);
     connect(d->ui.btnFetch, &QPushButton::clicked, this, &AddEditBlog::fetchBlogId);
-    connect(d->ui.comboApi, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &AddEditBlog::slotComboApiChanged);
+    connect(d->ui.comboApi, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
+            this, &AddEditBlog::slotComboApiChanged);
     connect(d->ui.txtUrl, &QLineEdit::returnPressed, this, &AddEditBlog::slotReturnPressed);
     connect(d->ui.txtUser, &QLineEdit::returnPressed, this, &AddEditBlog::slotReturnPressed);
     connect(d->ui.txtPass, &QLineEdit::returnPressed, this, &AddEditBlog::slotReturnPressed);
@@ -185,7 +180,8 @@ void AddEditBlog::autoConfigure()
         return;
     }
     qCDebug(BLOGILO_LOG) << "Trying to guess API type by Homepage contents";
-    KIO::StoredTransferJob *httpGetJob = KIO::storedGet(QUrl(d->ui.txtUrl->text()), KIO::NoReload, KIO::HideProgressInfo);
+    KIO::StoredTransferJob *httpGetJob =
+        KIO::storedGet(QUrl(d->ui.txtUrl->text()), KIO::NoReload, KIO::HideProgressInfo);
     connect(httpGetJob, &KIO::StoredTransferJob::result, this, &AddEditBlog::gotHtml);
     d->mFetchAPITimer = new QTimer(this);
     d->mFetchAPITimer->setSingleShot(true);
@@ -218,7 +214,8 @@ void AddEditBlog::gotHtml(KJob *job)
         return;
     }
 
-    QRegExp rxLiveJournal(QStringLiteral("rel=\"openid.server\" href=\"http://www.livejournal.com/openid/server.bml\""));
+    QRegExp rxLiveJournal(
+        QStringLiteral("rel=\"openid.server\" href=\"http://www.livejournal.com/openid/server.bml\""));
     if (rxLiveJournal.indexIn(httpData) != -1) {
         qCDebug(BLOGILO_LOG) << " rel=\"openid.server\" href=\"http://www.livejournal.com/openid/server.bml\" matched";
         d->mFetchAPITimer->deleteLater();
@@ -265,12 +262,15 @@ void AddEditBlog::gotXmlRpcTest(KJob *job)
     if (job->error()) {
         qCDebug(BLOGILO_LOG) << "Auto configuration failed! Error: " << job->errorString();
         hideWaitWidget();
-        KMessageBox::sorry(this, i18n("Auto configuration failed. You have to set Blog API on Advanced tab manually."));
+        KMessageBox::sorry(this,
+                           i18n("Auto configuration failed. You have to set Blog API on Advanced tab manually."));
         return;
     }
-    KMessageBox::information(this, i18n("The program could not guess the API of your blog, "
-                                        "but has found an XMLRPC interface and is trying to use it.\n"
-                                        "The MovableType API is assumed for now; choose another API if you know the server supports it."));
+    KMessageBox::information(this,
+                             i18n("The program could not guess the API of your blog, but has "
+                                  "found an XMLRPC interface and is trying to use it.\n"
+                                  "The MovableType API is assumed for now; choose another API "
+                                  "if you know the server supports it."));
     d->ui.comboApi->setCurrentIndex(2);
     QString textUrl = d->ui.txtUrl->text();
     while (textUrl.endsWith(QLatin1Char('/'))) {
@@ -334,9 +334,12 @@ void AddEditBlog::handleFetchIDTimeout()
     d->ui.txtId->clear();
     d->ui.txtId->setEnabled(true);
     hideWaitWidget();
-    KMessageBox::error(this, i18n("Fetching the blog id timed out. Check your Internet connection,"
-                                  "and your homepage URL, username or password.\nNote that the URL has to contain \"http://\"\n"
-                                  "If you are using a self-hosted Wordpress blog, you have to enable Remote Publishing in its configuration."));
+    KMessageBox::error(this,
+                       i18n("Fetching the blog id timed out. Check your Internet connection,"
+                            "and your homepage URL, username or password.\nNote that the URL "
+                            "has to contain \"http://\"\n"
+                            "If you are using a self-hosted Wordpress blog, you have to enable "
+                            "Remote Publishing in its configuration."));
 }
 
 void AddEditBlog::handleFetchAPITimeout()
@@ -346,8 +349,10 @@ void AddEditBlog::handleFetchAPITimeout()
     hideWaitWidget();
     d->ui.txtId->setEnabled(true);
     d->ui.txtId->clear();
-    KMessageBox::sorry(this, i18n("The API guess function has failed, "
-                                  "please check your Internet connection. Otherwise, you have to set the API type manually on the Advanced tab."),
+    KMessageBox::sorry(this,
+                       i18n("The API guess function has failed, please check your Internet "
+                            "connection. Otherwise, you have to set the API type manually "
+                            "on the Advanced tab."),
                        i18n("Auto Configuration Failed"));
 }
 
@@ -371,7 +376,7 @@ void AddEditBlog::fetchedBlogId(const QList< QMap < QString, QString > > &list)
     const int listCount(list.count());
     if (listCount > 1) {
         qCDebug(BLOGILO_LOG) << "User has more than ONE blog!";
-        QDialog *blogsDialog = new QDialog(this);
+        QPointer<QDialog> blogsDialog = new QDialog(this);
         QTableWidget *blogsList = new QTableWidget(blogsDialog);
         blogsList->setSelectionBehavior(QAbstractItemView::SelectRows);
         QList< QMap<QString, QString> >::const_iterator it = list.constBegin();
@@ -562,10 +567,11 @@ void AddEditBlog::slotComboApiChanged(int index)
 void AddEditBlog::slotAccepted()
 {
     if (d->bBlog->blogid().isEmpty() && d->ui.txtId->text().isEmpty()) {
-        KMessageBox::sorry(this, i18n("Blog ID has not yet been retrieved.\n"
-                                      "You can fetch the blog ID by clicking on \"Auto Configure\" or the \"Fetch ID\" button; otherwise, you have "
-                                      "to insert your blog ID manually.")
-                          );
+        KMessageBox::sorry(this,
+                           i18n("Blog ID has not yet been retrieved.\n"
+                                "You can fetch the blog ID by clicking on \"Auto Configure\" "
+                                "or the \"Fetch ID\" button; otherwise, you have "
+                                "to insert your blog ID manually."));
         return;
     }
     d->bBlog->setApi((BilboBlog::ApiType)d->ui.comboApi->currentIndex());
