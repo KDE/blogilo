@@ -18,31 +18,28 @@
 */
 
 #include "composerwebengine.h"
-#include "private/composerwebengine_p.h"
 #include "composereditorwebengine_debug.h"
-#include <kpimtextedit/emoticontexteditaction.h>
-#include "kpimtextedit/texttospeech.h"
-#include <QStandardPaths>
-#include <QFile>
-#include <QFileInfo>
-#include <QMenu>
-#include <QContextMenuEvent>
-#include <QWebEnginePage>
-#include <KMessageBox>
+#include "private/composerwebengine_p.h"
+
+#include <WebEngineViewer/WebEnginePage>
+#include <WebEngineViewer/WebHitTest>
+#include <WebEngineViewer/WebHitTestResult>
+
 #include <KActionCollection>
+#include <KFontAction>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KSelectAction>
+#include <KToggleAction>
 #include <KToolBar>
 
-#include <KLocalizedString>
 #include <QAction>
-#include <KToggleAction>
-#include <KFontAction>
-#include <KSelectAction>
+#include <QContextMenuEvent>
+#include <QFileInfo>
 #include <QMenu>
-#include <QIcon>
-#include <WebEngineViewer/WebHitTest>
-#include <WebEngineViewer/WebEnginePage>
+#include <QStandardPaths>
 #include <QWebEngineSettings>
-#include <WebEngineViewer/WebHitTestResult>
+
 using namespace ComposerEditorWebEngine;
 
 ComposerWebEngine::ComposerWebEngine(QWidget *parent)
@@ -66,7 +63,10 @@ ComposerWebEngine::ComposerWebEngine(QWidget *parent)
     qCDebug(COMPOSEREDITORWEBENGINE_LOG) << file.fileName();
 
     if (!file.open(QIODevice::ReadOnly)) {
-        KMessageBox::error(this, i18n("Cannot open template file %1.", QFileInfo(file).absoluteFilePath()), i18n("composer editor"));
+        KMessageBox::error(this,
+                           i18n("Cannot open template file %1.",
+                                QFileInfo(file).absoluteFilePath()),
+                           i18n("composer editor"));
     } else {
         setHtmlContent(QString::fromUtf8(file.readAll()));    //, "application/xhtml+xml" );
     }
@@ -82,12 +82,13 @@ ComposerWebEngine::~ComposerWebEngine()
 
 QString ComposerWebEngine::initialHtml()
 {
-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("composereditorwebengine/composereditorinitialhtml"));
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                  QStringLiteral("composereditorwebengine/composereditorinitialhtml"));
 }
 
 void ComposerWebEngine::createActions(const QList<ComposerWebEngineAction> &lstActions)
 {
-    Q_FOREACH (ComposerWebEngineAction action, lstActions) {
+    Q_FOREACH (const ComposerWebEngineAction &action, lstActions) {
         d->createAction(action);
     }
 

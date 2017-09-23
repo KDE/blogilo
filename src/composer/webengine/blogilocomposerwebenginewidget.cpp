@@ -18,9 +18,11 @@
 
 */
 
-#include "blogilocomposerwebengineeditor.h"
 #include "blogilocomposerwebenginewidget.h"
-#include "PimCommon/CustomToolsWidgetng"
+#include "blogilocomposerwebengineeditor.h"
+
+#include <PimCommon/CustomToolsWidgetng>
+
 #include <QVBoxLayout>
 
 BlogiloComposerWebEngineWidget::BlogiloComposerWebEngineWidget(BlogiloComposerWebEngineView *view, QWidget *parent)
@@ -32,15 +34,16 @@ BlogiloComposerWebEngineWidget::BlogiloComposerWebEngineWidget(BlogiloComposerWe
 
     lay->addWidget(mEditor);
     mCustomToolsWidget = new PimCommon::CustomToolsWidgetNg(nullptr);
-    connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::insertText, this, &BlogiloComposerWebEngineWidget::slotInsertShortUrl);
-    connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::toolActivated, this, &BlogiloComposerWebEngineWidget::slotInsertText);
+    connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::insertText,
+            this, &BlogiloComposerWebEngineWidget::slotInsertShortUrl);
+    connect(mCustomToolsWidget, &PimCommon::CustomToolsWidgetNg::toolActivated,
+            this, &BlogiloComposerWebEngineWidget::slotInsertText);
     lay->addWidget(mCustomToolsWidget);
     view->setCustomTools(mCustomToolsWidget);
 }
 
 BlogiloComposerWebEngineWidget::~BlogiloComposerWebEngineWidget()
 {
-
 }
 
 BlogiloComposerWebEngineEditor *BlogiloComposerWebEngineWidget::editor() const
