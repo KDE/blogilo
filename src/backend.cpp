@@ -141,7 +141,8 @@ void Backend::entriesListed(const QList< KBlog::BlogPost > &posts)
         BilboPost tempPost(posts.at(i));
         if (Settings::changeNToBreak()) {
             tempPost.setContent(tempPost.content().replace(QLatin1Char('\n'), QStringLiteral("<br/>")));
-            tempPost.setAdditionalContent(tempPost.additionalContent().replace(QLatin1Char('\n'), QStringLiteral("<br/>")));
+            tempPost.setAdditionalContent(
+                tempPost.additionalContent().replace(QLatin1Char('\n'), QStringLiteral("<br/>")));
         }
         DBMan::self()->addPost(tempPost, d->bBlog->id());
     }
@@ -154,8 +155,9 @@ void Backend::publishPost(BilboPost *post)
     qCDebug(BLOGILO_LOG) << "Blog Id: " << d->bBlog->id();
 //     BilboPost tmpPost = post;
     if (Settings::addPoweredBy()) {
-        QString poweredStr = QStringLiteral("<p>=-=-=-=-=<br/>"
-                                            "<i>Powered by <b><a href='http://blogilo.gnufolks.org/'>Blogilo</a></b></i></p>");
+        QString poweredStr =
+            QStringLiteral("<p>=-=-=-=-=<br/>"
+                           "<i>Powered by <b><a href='http://blogilo.gnufolks.org/'>Blogilo</a></b></i></p>");
         post->setContent(post->content() + poweredStr);
     }
     preparePost(post);
@@ -204,14 +206,16 @@ void Backend::uploadMedia(BilboMedia *media)
         if (!job->exec()) {
             data = job->data();
             qCCritical(BLOGILO_LOG) << "Job error: " << job->errorString();
-            tmp = i18n("Uploading media failed: Cannot read the media file, please check if it exists. Path: %1", media->localUrl().toDisplayString());
+            tmp = i18n("Uploading media failed: Cannot read the media file, please check if it exists. "
+                       "Path: %1", media->localUrl().toDisplayString());
             qCDebug(BLOGILO_LOG) << "Emitting sigError...";
             Q_EMIT sigMediaError(tmp, media);
         }
 
         if (data.count() == 0) {
             qCCritical(BLOGILO_LOG) << "Cannot read the media file, please check if it exists.";
-            tmp = i18n("Uploading media failed: Cannot read the media file, please check if it exists. Path: %1", media->localUrl().toDisplayString());
+            tmp = i18n("Uploading media failed: Cannot read the media file, please check if it exists. "
+                       "Path: %1", media->localUrl().toDisplayString());
             qCDebug(BLOGILO_LOG) << "Emitting sigError...";
             Q_EMIT sigMediaError(tmp, media);
             delete m;
@@ -225,8 +229,8 @@ void Backend::uploadMedia(BilboMedia *media)
 
         if (media->checksum() == 0) {
             qCCritical(BLOGILO_LOG) << "Media file checksum is zero";
-            tmp = i18n("Uploading media failed: Media file checksum is zero, please check file path. Path: %1",
-                       media->localUrl().toDisplayString());
+            tmp = i18n("Uploading media failed: Media file checksum is zero, please check file path. "
+                       "Path: %1", media->localUrl().toDisplayString());
             qCDebug(BLOGILO_LOG) << "Emitting sigError...";
             Q_EMIT sigMediaError(tmp, media);
             delete m;
@@ -234,7 +238,8 @@ void Backend::uploadMedia(BilboMedia *media)
         }
 
         if (!MWBlog) {
-            qCCritical(BLOGILO_LOG) << "MWBlog is NULL: casting has not worked, this should NEVER happen, has the gui allowed using GDATA?";
+            qCCritical(BLOGILO_LOG) << "MWBlog is NULL: casting has not worked, this should NEVER happen, "
+                                    << "has the gui allowed using GDATA?";
             tmp = i18n("INTERNAL ERROR: MWBlog is NULL: casting has not worked, this should NEVER happen.");
             qCDebug(BLOGILO_LOG) << "Emitting sigError...";
             Q_EMIT sigError(tmp);
@@ -275,8 +280,9 @@ void Backend::mediaUploaded(KBlog::BlogMedia *media)
     }
     quint16 newChecksum = qChecksum(media->data().data(), media->data().count());
     if (newChecksum != m->checksum()) {
-        qCCritical(BLOGILO_LOG) << "Check sum error: checksum of sent file: " << m->checksum() <<
-                                " Checksum of received file: " << newChecksum << "Error: " << media->error();
+        qCCritical(BLOGILO_LOG) << "Check sum error: checksum of sent file: " << m->checksum()
+                                << " Checksum of received file: " << newChecksum
+                                << "Error: " << media->error();
         const QString tmp(i18n("Uploading media failed: Checksum error. Returned error: %1",
                                media->error()));
         qCDebug(BLOGILO_LOG) << "Emitting sigMediaError ...";
@@ -430,7 +436,7 @@ KBlog::BlogPost *Backend::preparePost(KBlog::BlogPost *post)
     post->setContent(html1);
 
     content = post->additionalContent();
-    QString html2 = QString();
+    QString html2;
     i = 0;
     found = content.indexOf(QStringLiteral("<pre>"), i, Qt::CaseInsensitive);
     while (found != -1) {
