@@ -28,21 +28,16 @@
 */
 
 #include "stylegetter.h"
-#include "bilbopost.h"
-#include "bilboblog.h"
 #include "backend.h"
+#include "bilboblog.h"
+#include "bilbopost.h"
 #include "dbman.h"
-
-#include <kio/job.h>
-
-#include <kmessagebox.h>
-#include <klocalizedstring.h>
 #include "blogilo_debug.h"
 
-#include <QUrl>
-#include <QFile>
-#include <QDateTime>
-#include <QStandardPaths>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KIO/Job>
+
 #include <QDir>
 
 static const char POST_TITLE[] = "Temporary-Post-Used-For-Style-Detection-Title-";
@@ -60,7 +55,9 @@ StyleGetter::StyleGetter(const int blogid, QObject *parent)
                                    DBMan::self()->lastErrorText());
         return;
     }
-    mCachePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("/blogilo/%1/").arg(blogid);
+    mCachePath =
+        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
+        QLatin1Char('/') + QStringLiteral("/blogilo/%1/").arg(blogid);
     QDir dir;
     dir.mkpath(mCachePath);
     generateRandomPostStrings();
@@ -104,11 +101,13 @@ QString StyleGetter::styledHtml(const int blogid,
     dest.setScheme(QStringLiteral("file"));
 
     if (!dest.isValid()) {
-        return QLatin1String("<html><body><h2 align='center'>") + title + QLatin1String("</h2><br>") + content + QLatin1String("</html>");
+        return QLatin1String("<html><body><h2 align='center'>") + title +
+            QLatin1String("</h2><br>") + content + QLatin1String("</html>");
     }
     QFile file(dest.toLocalFile());
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        return QLatin1String("<html><body><h2 align='center'>") + title + QLatin1String("</h2><br>") + content + QLatin1String("</html>");
+        return QLatin1String("<html><body><h2 align='center'>") + title +
+            QLatin1String("</h2><br>") + content + QLatin1String("</html>");
     }
 
     QString buffer;
@@ -131,7 +130,6 @@ QString StyleGetter::styledHtml(const int blogid,
 
 void StyleGetter::slotTempPostPublished(int blogId, BilboPost *post)
 {
-
     QUrl postUrl;
 //     postUrl = post->permaLink();
     postUrl = post->link();
@@ -151,7 +149,6 @@ void StyleGetter::slotTempPostPublished(int blogId, BilboPost *post)
     KIO::StoredTransferJob *job = KIO::storedGet(postUrl, KIO::NoReload, KIO::HideProgressInfo);
     connect(job, &KJob::result,
             this, &StyleGetter::slotHtmlCopied);
-
 }
 
 void StyleGetter::slotHtmlCopied(KJob *job)
@@ -221,8 +218,8 @@ void StyleGetter::slotTempPostRemoved(int blog_id, const BilboPost &post)
 
 void StyleGetter::generateRandomPostStrings()
 {
-    srand(time(nullptr));
-    int postRandomNumber = rand();
+    qsrand(time(nullptr));
+    int postRandomNumber = qrand();
     mPostTitle = QStringLiteral("%1%2").arg(QLatin1String(POST_TITLE)).arg(postRandomNumber);
     mPostContent = QStringLiteral("%1%2").arg(QLatin1String(POST_CONTENT)).arg(postRandomNumber);
 }
@@ -232,4 +229,3 @@ void StyleGetter::slotError(const QString &errMsg)
     KMessageBox::detailedError(mParent, i18n("An error occurred in the latest transaction."), errMsg);
     b->deleteLater();
 }
-
