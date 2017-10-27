@@ -46,7 +46,7 @@
   <summary xml:lang="ar">عميل تدوين لكدي</summary>
   <summary xml:lang="bs">KDE klijent za bloganje</summary>
   <summary xml:lang="ca">Un client de blogs, creat per la comunitat KDE</summary>
-  <summary xml:lang="ca-valencia">Un client de blogs pel KDE</summary>
+  <summary xml:lang="ca-valencia">Un client de blogs, creat per la comunitat KDE</summary>
   <summary xml:lang="de">Ein Blogging-Programm für KDE</summary>
   <summary xml:lang="en-GB">A KDE Blogging Client</summary>
   <summary xml:lang="es">Un cliente de blogueo para KDE</summary>
@@ -81,7 +81,7 @@
   <description>
     <p>Blogilo is a blogging client by KDE, which supports various blogging APIs.</p>
     <p xml:lang="ca">El Blogilo és un client de blogs, creat per la comunitat KDE, el qual és compatible amb diverses API de blogs.</p>
-    <p xml:lang="ca-valencia">El Blogilo és un client de blogs pel KDE, el qual és compatible amb diverses API de blogs.</p>
+    <p xml:lang="ca-valencia">El Blogilo és un client de blogs, creat per la comunitat KDE, el qual és compatible amb diverses API de blogs.</p>
     <p xml:lang="de">Blogilo ist ein Blogging-Programm von KDE, das verschiedene Programmier-Schnittstellen (APIs) für Blog-Systeme unterstützt.</p>
     <p xml:lang="en-GB">Blogilo is a blogging client by KDE, which supports various blogging APIs.</p>
     <p xml:lang="es">Blogilo en un cliente de blogueo de KDE, que implementa varias API de blogueo.</p>
